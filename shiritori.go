@@ -39,6 +39,7 @@ func judge(text, word string) {
 		start(word)
 	}
 
+/*
 	whiteList := []string{
 		"あ", "い", "う", "え", "お",
 		"か", "き", "く", "け", "こ",
@@ -62,6 +63,7 @@ func judge(text, word string) {
 		"ラ", "リ", "ル", "レ", "ロ",
 		"ワ", "ヲ", "ン",
 	}
+:/
 
 	/*
 		for _, value := range textRune {
