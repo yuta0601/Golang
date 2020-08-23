@@ -27,14 +27,11 @@ func main() {
 	// 	fmt.Println(country, Capitals)
 	// }
 
-	_, ok := Capitals["イギリス"]
-	if ok {
+	if isExist("イギリス") {
 		fmt.Println("登録済み")
 	} else {
 		fmt.Println("未登録")
 	}
-
-	// _, ok = Capitals["日本"]
 	if isExist("日本") { // capitalsに日本が存在
 		delete(Capitals, "日本")
 	} else { // capitalsに日本が存在しない
@@ -50,11 +47,11 @@ func main() {
 func isExist(keyName string) bool {
 	msg := false
 	_, rst := Capitals[keyName]
+
 	if rst {
 		msg = true
 	} else {
 		msg = false
 	}
-
 	return msg
 }
