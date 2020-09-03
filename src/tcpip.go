@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	conn, err := net.Dial("tcp", "google.com")
+	conn, err := net.Dial("tcp", "golang.jp:80")
 
 	if err != nil {
 		fmt.Println(err)
