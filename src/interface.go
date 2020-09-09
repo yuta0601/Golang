@@ -2,26 +2,28 @@ package main
 
 import "fmt"
 
-// 演算インターフェイス型
+// Calculator 演算インターフェイス型
 type Calculator interface {
 	// 関数の定義
 	Calculate(a int, b int) int
 }
 
-// 足算型
+// Add 足算型
 type Add struct {
 	// フィールドは持たない
 }
 
-// Add型にCaluculatorインターフェイスのCalculator関数を実装
+// Calculate Add型にCaluculatorインターフェイスのCalculator関数を実装
 func (x Add) Calculate(a int, b int) int {
 	return a + b
 }
 
+// Sub はフィールドを持たない
 type Sub struct {
 	// フィールドは持たない
 }
 
+// Calculate Add型にCaluculatorインターフェイスのCalculator関数を実装
 func (x Sub) Calculate(a int, b int) int {
 	return a - b
 }
